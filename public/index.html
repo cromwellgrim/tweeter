@@ -10,6 +10,7 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- Font Links -->
       <!-- Bungee -->
       <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,10 +34,35 @@
       </nav>
 
       <!-- header plus logo-->
-
+      <header class="header">
+        <div class="profile-hex">
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div class="profile-name">
+            <h2>Dylan</h2>
+        </div>
+      </header>
 
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit" >Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <p>Blaseball know discipline shelled moist ground out thieves cellar the peanut rubber maximum blaseball win hall stars tossed telephone. Slugging catcher ORB slide bench league, left fielder nubber Patterson fingers. Bullpen blue run rotation relief pitcher grass umpire incineration. Forkball bullpen the shadows peanuts squeeze club blaseball2 field sport. Blase cookie triple play blue sog dog relay peanuts starting pitcher inning.</p>
+      <div>
+        <h3>Hello There</h3>
+      </div>
+    
+    </main>
   </body>
 </html>

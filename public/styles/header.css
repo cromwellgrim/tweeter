@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  flex-direction:column;
+  height: 400px;
+  width: inherit;
+  justify-content:center;
+  align-self: center;
+  background-color: bisque;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+}
+
+profile-hex {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+profile-name {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+}
