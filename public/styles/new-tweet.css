@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+new-tweet {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1em;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+  justify-content: center;
+  font-family: 'Bungee Shade', cursive;
+}
+
+button {
+  display: flex;
+  align-self:flex-start;
+  font-family: 'Bungee Shade', cursive;
+  height:fit-content;
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color:bisque;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: azure;
+}
+
+tweet-text {
+  display: flex;
+  align-self: center;
+  border-bottom: 1em black;
+  color: black;
+}
+
+counter {
+  display: flex;
+  align-self: flex-end;
+  color:darkslategrey;
+  
+}
