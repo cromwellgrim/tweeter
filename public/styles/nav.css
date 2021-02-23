@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1em;
+  background-color: #4056A1;
+  width: auto;
+  height: 120px;
+  font-family: 'Bungee Shade', cursive;
+}
+
+title {
+  font-family: 'Bungee Shade', cursive;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Bungee Shade';
+  align-self: flex-start;
+  background-color: #FFFFFF;
+}
+
+button {
+  align-self:flex-end;
+  height:fit-content;
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color:bisque;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: azure;
+}
