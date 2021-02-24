@@ -1,10 +1,8 @@
 .tweet-container {
-  display: flex;
   border: 1px solid black;
-  background: transparent;
+  background: blue;
 }
 
 .tweet-container:hover {
-  display: flex;
   box-shadow: cadetblue;
 }

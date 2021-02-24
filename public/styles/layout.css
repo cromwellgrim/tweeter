@@ -16,7 +16,7 @@ html {
 
 
 body {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
@@ -24,23 +24,23 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif; */
 }
 
 main {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px 40px;
-  width: inherit 70%;
-  background-color: #f4f1ec;
+  width: inherit 70%; */
 }
 
-textarea {
-  background: transparent;
-  border:0ch;
-}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ textarea {
+  /* background: transparent; */
+}

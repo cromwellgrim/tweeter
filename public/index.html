@@ -10,8 +10,9 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweet-container" type="test/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="test/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <!-- Font Links -->
       <!-- Bungee -->
       <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -54,20 +55,23 @@
         <form class="new-tweet-form" action="/tweets/" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="new-tweet-div">
-              <button class="new-tweet-btn" type="submit" >Tweet</button>
+              <button class="new-tweet-btn" type="submit" >That's the Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
       <article class="tweet-container">
-        <header></header>
-          <textarea >Blaseball know discipline shelled moist ground out thieves.</textarea>
+        <header>
+          <img src="/images/user.png">
+
         </header>
-        
+        <div>
+          <textarea>Blaseball know discipline shelled moist ground out thieves.</textarea>
+        </div>
         <footer>
           <hr>
           <di>1 day ago</div>
-          <div style="justify-content: flex-end;">
+          <div>
             <img src="/images/s-bell.png">
             <img src="/images/s-retweet.png">
             <img src="/images/s-star.png">

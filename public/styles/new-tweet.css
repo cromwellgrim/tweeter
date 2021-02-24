@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
-.new-tweet {
+/* .new-tweet {
   display: flex;
   flex-direction: row;
   width: inherit 80%;
@@ -26,14 +26,14 @@
   height:fit-content;
   margin-left: 20px;
   padding: 9px 25px;
-  background-color:bisque;
+  background: transparent;
   border: none;
   border-radius: 25px;
   transition: all 0.3s ease 0s;
 }
 
 .new-tweet-btn:hover {
-  background-color: azure;
+  outline: 4px;
 }
 
 #tweet-text {
@@ -54,4 +54,4 @@
 
 .counter-negative {
   color: red;
-}
+} */
