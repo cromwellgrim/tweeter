@@ -1,43 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
-new-tweet {
+.new-tweet {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
+  width: fit-content;
   margin: 0;
-  padding: 1em;
+  padding: 20px 1200px;
   background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
   justify-content: center;
-  font-family: 'Bungee Shade', cursive;
 }
 
-button {
+.new-tweet-form {
   display: flex;
-  align-self:flex-start;
+  flex-direction: column;
+}
+
+.new-tweet-div {
+  display: flex;
+  flex-direction: row;
+}
+.new-tweet-btn {
+  display: flex;
+  justify-self:left;
   font-family: 'Bungee Shade', cursive;
   height:fit-content;
   margin-left: 20px;
   padding: 9px 25px;
   background-color:bisque;
   border: none;
-  border-radius: 50px;
+  border-radius: 25px;
   transition: all 0.3s ease 0s;
 }
 
-button:hover {
+.new-tweet-btn:hover {
   background-color: azure;
 }
 
-tweet-text {
+#tweet-text {
   display: flex;
   align-self: center;
+  height: 200px;
+  width:600px;
   border-bottom: 1em black;
   color: black;
 }
 
-counter {
+.counter {
   display: flex;
-  align-self: flex-end;
-  color:darkslategrey;
-  
+  align-self:flex-end;
+  color: black; 
+  font-family: 'Bungee Shade', cursive;
+}
+
+.counter-negative {
+  color: red;
 }
