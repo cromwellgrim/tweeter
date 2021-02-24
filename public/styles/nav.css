@@ -3,7 +3,7 @@
 .nav-bar {
   margin-bottom: 100px;
   background-color: #4056A1;
-  width: 100%;
+  width: 80%;
   height: 120px;
   font-family: 'Bungee Shade', cursive;
   display: flex;
@@ -33,8 +33,8 @@
   height:fit-content;
   margin-left: 20px;
   padding: 9px 25px;
-  border: none;
   border-radius: 50px;
+  background: transparent;
   transition: all 0.3s ease 0s;
 }
 

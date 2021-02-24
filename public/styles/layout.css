@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  max-width: 80%;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -32,10 +33,14 @@ main {
   justify-content: center;
   align-items: center;
   margin: 20px 40px;
-  width: inherit 80%;
+  width: inherit 70%;
   background-color: #f4f1ec;
 }
 
+textarea {
+  background: transparent;
+  border:0ch;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

@@ -3,17 +3,16 @@
 .new-tweet {
   display: flex;
   flex-direction: row;
-  box-sizing: border-box;
-  width: fit-content;
+  width: inherit 80%;
   margin: 0;
   padding: 20px 1200px;
-  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
   justify-content: center;
 }
 
 .new-tweet-form {
   display: flex;
   flex-direction: column;
+
 }
 
 .new-tweet-div {
@@ -42,7 +41,7 @@
   align-self: center;
   height: 200px;
   width:600px;
-  border-bottom: 1em black;
+  border: 1px solid black;
   color: black;
 }
 
