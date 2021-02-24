@@ -15,3 +15,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+https://fontawesome.com/icons/star?style=solid
+https://fontawesome.com/icons/retweet
+https://fontawesome.com/icons/heart?style=solid
+https://fontawesome.com/icons/bell?style=regular
+https://fontawesome.com/license
