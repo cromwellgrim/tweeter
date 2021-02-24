@@ -1,22 +1,17 @@
-header {
+.header {
   display: flex;
   flex-direction:column;
-  height: 400px;
-  width: inherit;
-  justify-content:center;
-  align-self: center;
+  align-items: center;
+  margin-top: 50px;
   background-color: bisque;
-  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+  background-image: url(https://www.transparenttextures.com/patterns/argyle.png);
 }
 
-profile-hex {
-  display: flex;
-  justify-content: center;
-  align-self: flex-end;
+.profile-hex {
+  padding-top: 20px;
 }
 
-profile-name {
+.profile-name {
   display: flex;
-  justify-content: center;
-  align-self: flex-end;
+  flex-direction:row;
 }
