@@ -4,7 +4,7 @@
   align-items: center;
   margin-top: 50px;
   background-color: bisque;
-  background-image: url(https://www.transparenttextures.com/patterns/argyle.png);
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
 }
 
 .profile-hex {
