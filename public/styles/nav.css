@@ -1,47 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
 .nav-bar {
-  /* margin-bottom: 100px;
-  background-color: #4056A1;
-  width: 80%;
-  height: 120px;
-  font-family: 'Bungee Shade', cursive;
   display: flex;
-  flex-direction: row;
-  padding: 0;
-  justify-content:space-between; */
+  justify-content: space-around;
+  padding: 1.5em;
+  height: 120px;
+  width: 100%;
+  background-color:#4056A1;
+  margin-bottom: 10%;
 }
 
 .sticky {
-  /* position: fixed;
+  position: fixed;
   top: 0;
-  padding-bottom: 20px; */
 }
 
 .title {
-  /* align-self:flex-start;
   font-family: 'Bungee Shade', cursive;
-  margin: 30px 20px;
-  font-weight: 400;
+  color: white;
   font-size: 80px;
-  color: #FFFFFF;
-  text-decoration: none; */
 }
 
 .nav-bar-btn {
-  /* align-self:flex-end;
-  height:fit-content;
-  margin-left: 20px;
-  padding: 9px 25px;
-  border-radius: 50px;
+  display: flex;
+  box-shadow: none;
   background: transparent;
-  transition: all 0.3s ease 0s; */
+  font-family: 'Bungee', cursive;
 }
 
-.nav-bar-btn:hover {
-  /* background-color: azure; */
-}
-
-.content {
-  /* padding-top: 130px; */
-}
+/* .nav-bar-btn:hover {
+  background-color: azure;
+} */
