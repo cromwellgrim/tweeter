@@ -16,31 +16,30 @@ html {
 
 
 body {
-  /* display: flex;
+  display:flex;
   flex-direction: column;
-  justify-items: center;
   align-items: center;
-  max-width: 80%;
-  color: #545149;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  color:#545149;
   background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif; */
 }
 
 main {
-  /* display: flex;
+  display:flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 20px 40px;
-  width: inherit 70%; */
+  justify-content: center;
+  width: 90%;
+  background-color: #f4f1ec;
 }
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- textarea {
-  /* background: transparent; */
+textarea {
+  background: transparent;
+  resize:none;
+  overflow: auto;
 }
