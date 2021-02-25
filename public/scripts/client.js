@@ -7,41 +7,42 @@
 const tweetData = [
   {
     "user": {
-      "name": "Newton",
+      "name": "Gandalf",
       "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+      "handle": "@GreyWizard"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Even The Very Wise Cannot See All Ends."
     },
     "created_at": 1614034986366
   },
   {
     "user": {
-      "name": "Descartes",
+      "name": "Neil Gaiman",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "handle": "@ng"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten."
     },
     "created_at": 1614121386366
   }
 ];
 
-const createTweetElement = function() {
+const createTweetElement = function(tweet) {
   let $tweet = $(`
-  <article>
-    <header>
+  <article class="tweet-article">
+    <header class="tweet-container-header">
       <div class="user-pic-name">
-      <img class="user-pic" src=${tweetData.user["avatars"]} />
-      <p>${tweetData.user["name"]}</p>
-      <div>
-      <p class="user-handle">${tweetData.user["handle"]}</p>
+        <img class="user-pic" src="${tweet["user"]["avatars"]}" />
+        <p>${tweet["user"]["name"]}</p>
+      </div>
+      <p class="user-handle">${tweet["user"]["handle"]}</p>
     </header>
-    <p>${tweetData.content["text"]}</p>
-    <footer>
-    <p>${tweetData.created_at} day ago</p>
+    <p>${tweet["content"]["text"]}</p>
+    <hr>
+    <footer class="tweet-container-footer">
+    <p>${tweet["created_at"]} day ago</p>
     <div class="icons">
       <img src="/images/s-bell.png">
       <img src="/images/s-retweet.png">
@@ -54,12 +55,24 @@ const createTweetElement = function() {
 };
 
 const renderTweets = function(tweets) {
-  for (let tweet of tweets) {
-    $('.tweet-container').append(createTweetElement(tweet);
+  for (let tweet of Object.values(tweets)) {
+  $('.tweet-container').append(createTweetElement(tweet));
   }
 };
 
+$(document).ready(function() {
+  renderTweets(tweetData);
+});
 
-$(document).ready(function () {
-  renderTweets(tweetData)
+
+$(function() {
+  const $form = $('#tweet-text');
+  $form.on('submit', function (event) {
+    event.preventDefault();
+    $.ajax('index.js', { method: 'POST' })
+    .then(function (morePostsHtml) {
+      console.log('Success: ', morePostsHtml);
+      $button.replaceWith(morePostsHtml);
+    });
+  });
 });
