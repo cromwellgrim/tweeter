@@ -70,9 +70,8 @@ $(function() {
   $form.on('submit', function (event) {
     event.preventDefault();
     $.ajax('index.js', { method: 'POST' })
-    .then(function (morePostsHtml) {
-      console.log('Success: ', morePostsHtml);
-      $button.replaceWith(morePostsHtml);
+    .then(function (tweets) {
+      $form.appen(tweets);
     });
   });
 });
