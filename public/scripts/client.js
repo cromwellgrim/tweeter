@@ -58,18 +58,20 @@ const createTweetElement = function(tweet) {
 
 const renderTweets = function(tweets) {
   for (let tweet of Object.values(tweets)) {
-  $('.tweet-container').append(createTweetElement(tweet));
+  $('.tweet-container').prepend(createTweetElement(tweet));
   }
 };
 
-// $(document).ready(function() {
-//   renderTweets(tweetData);
-// });
+$(document).ready(function() {
+  renderTweets(tweetData);
+});
 
 $(function() {
   $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
+    let tweetText = $('#tweet-text').val().length;
     
+
     $.ajax({
       url: "/tweets",
       method: "POST",
@@ -86,8 +88,8 @@ $(document).ready(function() {
       url: '/tweets',
       method: "GET",
     })
-    .then((result) => {
-      renderTweets(result);
+    .then((freshTweet) => {
+      renderTweets(freshTweet);
     });
   });
 });
