@@ -1,4 +1,7 @@
 .tweet-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   border: 1px solid black;
   background: blue;
 }
@@ -6,3 +9,23 @@
 .tweet-container:hover {
   box-shadow: cadetblue;
 }
+
+/*<!-- <section class="tweet-container">
+<article>
+  <header>
+    <img src="/images/user.png">
+
+  </header>
+  <div>
+    <textarea>Blaseball know discipline shelled moist ground out thieves.</textarea>
+  </div>
+  <footer></footer>
+</article>
+<hr>
+<div>1 day ago</div>
+<div>
+  <img src="/images/s-bell.png">
+  <img src="/images/s-retweet.png">
+  <img src="/images/s-star.png">
+</div>
+</section> --> */
