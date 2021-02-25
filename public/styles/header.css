@@ -1,16 +1,24 @@
 .header {
-  /* display: flex;
-  flex-direction:column;
+  padding-top: 130px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-top: 50px;
-  background:transparent; */
+  height: 530px;
+  width: 100%;
+  color:#4056A1;
+  background-color: #cbf8e25d;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
 }
 
-.profile-hex {
-  /* padding-top: 20px; */
-}
+/* .profile-hex {
 
+} */
 .profile-name {
-  /* display: flex;
-  flex-direction:row; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  outline: 2px black;
 }
+.profile-last-name {
+  font-style: italic;
+} 
