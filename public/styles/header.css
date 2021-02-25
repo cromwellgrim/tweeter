@@ -15,9 +15,6 @@
 } */
 .profile-name {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  outline: 2px black;
 }
 .profile-last-name {
   font-style: italic;
