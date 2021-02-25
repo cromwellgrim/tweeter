@@ -3,7 +3,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 // $("#tweet-form").text(textFromUser);
+// I need my security to be achieved!
 
 
 const tweetData = [
@@ -31,6 +33,9 @@ const tweetData = [
   }
 ];
 
+// change the created_at element to real time
+
+/* createTweetElement constructs an html article for the tweet based off info delivered from the db */
 const createTweetElement = function(tweet) {
   let $tweet = $(`
   <article class="tweet-article">
@@ -56,21 +61,53 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+// toggle stretch goal = $('#tweet-form').hide();
+
+/* renderTweets loops through my tweet db and inputs the info into the createTweetElement */
 const renderTweets = function(tweets) {
   for (let tweet of Object.values(tweets)) {
   $('.tweet-container').prepend(createTweetElement(tweet));
   }
 };
 
+/* This creates two sample tweets for the page to start with */
 $(document).ready(function() {
   renderTweets(tweetData);
 });
 
+
+/* Submit even from the tweet form, checks for empty tweets or long tweets and shows errors.
+   If no errors it clears my tweet form and sends the serialized data to the /tweets page */
 $(function() {
   $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
     let tweetText = $('#tweet-text').val().length;
+    let $tweetEmpty = $(`
+      <p id="error"> Let us know your thoughts, type in a tweet</p>
+    `);
+    let $tweetLong = $(`
+      <p id="error"> That's too many thoughts, cut your tweet back</p>
+    `);
     
+    if (!tweetText) {
+      $('.error-box').show();
+      $('.error-box').empty();
+      $('.error-box').append($tweetEmpty);
+
+      return;
+    }
+
+    if(tweetText > 140) {
+      $('.error-box').show();
+      $('.error-box').empty();
+      $('.error-box').append($tweetLong);
+      return;
+    }
+
+    if(140 > tweetText >= 0) {
+      $('.error-box').hide();
+      $('#tweet-text').val('');
+    }
 
     $.ajax({
       url: "/tweets",
@@ -80,7 +117,7 @@ $(function() {
   });
 });
 
-
+/* collects newly added info from the db (freshTweet) and renders it to the tweet container */
 $(document).ready(function() {
   $('#tweet-form').on('submit', function(event) {
     event.preventDefault();

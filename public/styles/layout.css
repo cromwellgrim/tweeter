@@ -43,3 +43,17 @@ textarea {
   resize:none;
   overflow: auto;
 }
+
+.error-box{
+  visibility: hidden;
+  display: flex;
+  padding: 5px;
+  border: 2px solid rgb(155, 73, 73);
+  color: rgb(155,73,73);
+}
+
+#error{
+  visibility:visible;
+  padding: 5px;
+  border: 2px solid rgb(155, 73, 73);
+}

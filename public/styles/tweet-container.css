@@ -10,7 +10,8 @@
 }
 
 .tweet-article:hover .user-handle {
-  box-shadow: 20px 20px 30px -10px cadetblue;
+  color:cadetblue;
+  /* box-shadow: 20px 20px 30px -10px cadetblue; */
   visibility: visible;
 }
 

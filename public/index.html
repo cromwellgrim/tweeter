@@ -54,9 +54,11 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="error-box">
+        <!-- error message goes here -->
+      </section>
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form class="new-tweet-form" action="/tweets/" method="POST">
+        <form id="tweet-form" class="new-tweet-form" action="/tweets/" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="new-tweet-div">
               <button class="new-tweet-btn" type="submit" >That's it. That's the Tweet</button>
@@ -65,7 +67,7 @@
         </form>
       </section>
       <section class="tweet-container">
-      
+        <!-- tweets are loaded here -->
       </section>
     </main>
   </body>
