@@ -40,13 +40,13 @@ module.exports = function(DataHelpers) {
       }
     });
   });
-
+  /* receives tweet data and saves it to the db */
   tweetsRoutes.post("/tweets", function(req, res) {
     let freshTweet = req.body.text;
     DataHelpers.saveTweet((freshTweet, err));
     res.redirect('/');
   });
-
+  /* sends db info back to the main page to post in a tweet container */
   tweetsRoutes.get("/tweets", function(req, res) {
     DataHelpers.getTweets(db);
     res.render("/");
