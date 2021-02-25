@@ -16,7 +16,7 @@ module.exports = function(DataHelpers) {
       }
     });
   });
-
+  
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
@@ -31,6 +31,13 @@ module.exports = function(DataHelpers) {
       },
       created_at: Date.now()
     };
+
+    tweetsRoutes.post("/tweets", function(req, res) {
+      let freshTweet = req.body.text;
+      DataHelpers.saveTweet((freshTweet, err) => {
+        res.redirect('/');
+      });
+    });
 
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
