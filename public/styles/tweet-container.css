@@ -1,31 +1,57 @@
 .tweet-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
+  background:transparent;
+}
+
+.tweet-article:hover {
+  box-shadow: 20px 20px 30px -10px cadetblue;
+}
+
+.tweet-article:hover .user-handle {
+  box-shadow: 20px 20px 30px -10px cadetblue;
+  visibility: visible;
+}
+
+.tweet-article {
+  display: flex;
+  flex-flow: column;
   border: 1px solid black;
-  background: blue;
+  padding: 5px;
+  margin: 5px;
 }
 
-.tweet-container:hover {
-  box-shadow: cadetblue;
+.tweet-container-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
 }
 
-/*<!-- <section class="tweet-container">
-<article>
-  <header>
-    <img src="/images/user.png">
+.user-pic-name {
+  display: flex;
+}
 
-  </header>
-  <div>
-    <textarea>Blaseball know discipline shelled moist ground out thieves.</textarea>
-  </div>
-  <footer></footer>
-</article>
-<hr>
-<div>1 day ago</div>
-<div>
-  <img src="/images/s-bell.png">
-  <img src="/images/s-retweet.png">
-  <img src="/images/s-star.png">
-</div>
-</section> --> */
+.user-pic {
+  display: flex;
+  padding-right: 5px;
+}
+
+.user-handle {
+  display: flex;
+  justify-self: flex-end;
+  background: transparent;
+  visibility: hidden;
+}
+
+.tweet-container-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid black;
+  padding: 2px;
+
+}
+
+.icons {
+ padding: 2px
+}
