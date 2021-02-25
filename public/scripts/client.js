@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+// $("#tweet-form").text(textFromUser);
+
 
 const tweetData = [
   {
@@ -60,18 +62,33 @@ const renderTweets = function(tweets) {
   }
 };
 
-$(document).ready(function() {
-  renderTweets(tweetData);
+// $(document).ready(function() {
+//   renderTweets(tweetData);
+// });
+
+$(function() {
+  $('#tweet-form').on('submit', function(event) {
+    event.preventDefault();
+    
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $(this).serialize()
+    })
+  });
 });
 
 
-$(function() {
-  const $form = $('#tweet-text');
-  $form.on('submit', function (event) {
+$(document).ready(function() {
+  $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
-    $.ajax('index.js', { method: 'POST' })
-    .then(function (tweets) {
-      $form.appen(tweets);
+    $.ajax({
+      url: '/tweets',
+      method: "GET",
+    })
+    .then((result) => {
+      renderTweets(result);
     });
   });
 });
+

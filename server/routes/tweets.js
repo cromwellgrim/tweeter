@@ -32,13 +32,6 @@ module.exports = function(DataHelpers) {
       created_at: Date.now()
     };
 
-    tweetsRoutes.post("/tweets", function(req, res) {
-      let freshTweet = req.body.text;
-      DataHelpers.saveTweet((freshTweet, err) => {
-        res.redirect('/');
-      });
-    });
-
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
         res.status(500).json({ error: err.message });
@@ -46,6 +39,17 @@ module.exports = function(DataHelpers) {
         res.status(201).send();
       }
     });
+  });
+
+  tweetsRoutes.post("/tweets", function(req, res) {
+    let freshTweet = req.body.text;
+    DataHelpers.saveTweet((freshTweet, err));
+    res.redirect('/');
+  });
+
+  tweetsRoutes.get("/tweets", function(req, res) {
+    DataHelpers.getTweets(db);
+    res.render("/");
   });
 
   return tweetsRoutes;
