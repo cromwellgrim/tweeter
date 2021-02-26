@@ -16,9 +16,13 @@
   color:white;
   background-color: #4056A1;
   border: none;
+  margin-left: 2.75px;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
-  border
+}
+
+.new-tweet-btn:hover {
+  transform: scale(1.02);
 }
 
 #tweet-text {
