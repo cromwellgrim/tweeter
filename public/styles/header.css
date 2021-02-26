@@ -1,8 +1,8 @@
 .header {
-  padding-top: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 130px;
   height: 530px;
   width: 100%;
   color:#4056A1;

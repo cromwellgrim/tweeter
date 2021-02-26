@@ -38,12 +38,18 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+a:link, a:visited {
+  text-decoration: none;
+}
+
+ /* Makes sure all textareas start transparent and keep their size with text */
 textarea {
   background: transparent;
   resize:none;
   overflow: auto;
 }
 
+/* class to help reveal and remove the error messages */
 .error-box{
   visibility: hidden;
   display: flex;
@@ -52,8 +58,44 @@ textarea {
   color: rgb(155,73,73);
 }
 
+/* id to help reveal and remove the error messages */
 #error{
   visibility:visible;
   padding: 5px;
   border: 2px solid rgb(155, 73, 73);
+}
+
+/* for responsive design at a tablet screen size */
+@media screen and (min-width: 768px) {
+
+body {
+  flex-direction: row;
+}
+
+main {
+  padding-top: 130px;
+  flex-shrink: 1.5;
+  width: 70%;
+}
+
+.nav-bar {
+  font-size: 170%;
+}
+
+.title {
+  font-size: 120%;
+}
+
+.header {
+  flex-wrap: wrap;
+  padding-top: 130px;
+  flex-shrink: 1.5;
+  max-height:fit-content;
+  width: 40px;
+  align-self: flex-start;
+}
+
+.tweet-article {
+  flex-shrink: 5;
+}
 }
