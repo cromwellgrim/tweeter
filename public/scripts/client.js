@@ -69,7 +69,22 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-// toggle stretch goal = $('#tweet-form').hide();
+/* toggle stretch goal 2: sends user back to top of screen */
+$(document).ready(function() {
+  $('.to-the-top').hide();
+  $(window).on('scroll', function(event) {
+    let showArrow = 200;
+    if($(this).scrollTop() > showArrow ) {
+      $('.to-the-top').fadeIn();
+    } else {
+      $('.to-the-top').fadeOut();
+    }
+  });
+  $('.to-the-top').on('click', function(event) {
+    $('html, body').animate({scrollTop : 0}, 800);
+    return false;
+  });
+});
 
 /* renderTweets loops through my tweet db and inputs the info into the createTweetElement */
 const renderTweets = function(tweets) {
@@ -87,6 +102,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.nav-bar-btn').on('click', function(event) {
     $('#tweet-form').toggle('show');
+    $('#tweet-text').focus();
   });
 });
 
