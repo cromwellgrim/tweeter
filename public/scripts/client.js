@@ -83,6 +83,12 @@ $(document).ready(function() {
   renderTweets(tweetData);
 });
 
+/* this toggles the new tweet form */
+$(document).ready(function() {
+  $('.nav-bar-btn').on('click', function(event) {
+    $('#tweet-form').toggle('show');
+  });
+});
 
 /* Submit even from the tweet form, checks for empty tweets or long tweets and shows errors.
    If no errors it clears my tweet form and sends the serialized data to the /tweets page */
