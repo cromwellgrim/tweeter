@@ -38,8 +38,28 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ /* removes underline for links */
 a:link, a:visited {
   text-decoration: none;
+}
+
+/* sends user to top of screen */
+.to-the-top {
+  justify-content: center;
+  position: fixed;
+  color:black;
+  bottom: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: opacity 0.1s ease-out;
+  background-color: transparent;
+  background-image: url("../images/arrow.svg");
+}
+
+.to-the-top:hover{
+  opacity: 0.7;
 }
 
  /* Makes sure all textareas start transparent and keep their size with text */
@@ -87,11 +107,8 @@ main {
 }
 
 .header {
-  flex-wrap: wrap;
-  padding-top: 130px;
-  flex-shrink: 1.5;
+  flex-shrink: 2;
   max-height:fit-content;
-  width: 40px;
   align-self: flex-start;
 }
 
