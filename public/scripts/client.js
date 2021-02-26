@@ -36,8 +36,11 @@ const tweetData = [
     "created_at": 1614121386366
   }
 ];
-    /*     <p>${tweet["content"]["text"]}</p> */
-// change the created_at element to real time
+
+/* change the created_at element to day amount */
+const day = function(milliseconds) {
+  return Math.round(milliseconds / (60*60*24*2000) / 1000);
+} 
 
 /* createTweetElement constructs an html article for the tweet based off info delivered from the db */
 const createTweetElement = function(tweet) {
@@ -54,7 +57,7 @@ const createTweetElement = function(tweet) {
 
     <hr>
     <footer class="tweet-container-footer">
-    <p>${tweet["created_at"]} day ago</p>
+    <p>${day(tweet["created_at"])} days ago</p>
     <div class="icons">
       <img src="/images/s-bell.png">
       <img src="/images/s-retweet.png">
