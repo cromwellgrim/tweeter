@@ -10,12 +10,10 @@
   background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
 }
 
-/* .profile-hex {
-
-} */
 .profile-name {
   display: flex;
 }
+
 .profile-last-name {
   font-style: italic;
 } 
