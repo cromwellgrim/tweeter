@@ -1,8 +1,12 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a completely unique website idea and not at all similar to different site about a bird.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+You'll have to use my account for now as it is the only user available. 
+
+Please enjoy writing a number of tweets, then hiding the tweeter when you're out of thoughts.
+Scroll through all of the tweets until your scroll finger is tired and simply use the arrow to jump back to the top!
+
 
 ## Getting Started
 
@@ -15,9 +19,14 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
+- md5
 
+
+Icons provided by fontawesome.com according to their use-license.
 https://fontawesome.com/icons/star?style=solid
 https://fontawesome.com/icons/retweet
-https://fontawesome.com/icons/heart?style=solid
 https://fontawesome.com/icons/bell?style=regular
+https://fontawesome.com/icons/arrow-circle-up?style=solid
 https://fontawesome.com/license
