@@ -5,8 +5,17 @@ Tweeter is a completely unique website idea and not at all similar to different 
 You'll have to use my account for now as it is the only user available. 
 
 Please enjoy writing a number of tweets, then hiding the tweeter when you're out of thoughts.
+
 Scroll through all of the tweets until your scroll finger is tired and simply use the arrow to jump back to the top!
 
+## Screenshots
+!["tweeter main page desktop"](https://github.com/cromwellgrim/tweeter/blob/master/docs/main%20page%20desktop.png)
+!["tweeter main narrow view"](https://github.com/cromwellgrim/tweeter/blob/master/docs/narrow%20view.png)
+!["tweeter posted tweet"](https://github.com/cromwellgrim/tweeter/blob/master/docs/posted%20tweet.png)
+!["tweeter compose tweet hidden"](https://github.com/cromwellgrim/tweeter/blob/master/docs/main%20page%20desktop%20-%20compose%20tweet%20hidden.png)
+!["tweeter counter normal"](https://github.com/cromwellgrim/tweeter/blob/master/docs/counter%20normal.png)
+!["tweeter counter red"](https://github.com/cromwellgrim/tweeter/blob/master/docs/counter%20red.png)
+!["tweeter scroll button"](https://github.com/cromwellgrim/tweeter/blob/master/docs/scroll%20button.png)
 
 ## Getting Started
 
