@@ -12,9 +12,9 @@
 
 .new-tweet-btn {
   display: flex;
-  font-family: 'Bungee', cursive;
-  color:white;
-  background-color: #4056A1;
+  font-family: "Bungee", cursive;
+  color: white;
+  background-color: #4056a1;
   border: none;
   margin-left: 2.75px;
   border-bottom-left-radius: 2px;
@@ -39,11 +39,11 @@
 
 .counter {
   display: flex;
-  align-self:flex-end;
-  color: black; 
-  font-family: 'Bungee', cursive;
+  align-self: flex-end;
+  color: black;
+  font-family: "Bungee", cursive;
 }
 
 .counter-negative {
   color: red;
-} 
+}

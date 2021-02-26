@@ -5,7 +5,7 @@
  */
 
 /* security function to prevent hijacking page from tweet form submission */
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -39,12 +39,12 @@ const tweetData = [
 ];
 
 /* change the created_at element to day amount */
-const day = function (milliseconds) {
+const day = function(milliseconds) {
   return Math.round(milliseconds / (60 * 60 * 24 * 2000) / 1000);
 };
 
 /* createTweetElement constructs an html article for the tweet based off info delivered from the db */
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   let $tweet = $(`
   <article class="tweet-article">
     <header class="tweet-container-header">
@@ -71,9 +71,9 @@ const createTweetElement = function (tweet) {
 };
 
 /* toggle stretch goal 2: sends user back to top of screen */
-$(document).ready(function () {
+$(document).ready(function() {
   $(".to-the-top").hide();
-  $(window).on("scroll", function (event) {
+  $(window).on("scroll", function(event) {
     let showArrow = 200;
     if ($(this).scrollTop() > showArrow) {
       $(".to-the-top").fadeIn();
@@ -81,27 +81,27 @@ $(document).ready(function () {
       $(".to-the-top").fadeOut();
     }
   });
-  $(".to-the-top").on("click", function (event) {
+  $(".to-the-top").on("click", function(event) {
     $("html, body").animate({ scrollTop: 0 }, 800);
     return false;
   });
 });
 
 /* renderTweets loops through my tweet db and inputs the info into the createTweetElement */
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   for (let tweet of Object.values(tweets)) {
     $(".tweet-container").prepend(createTweetElement(tweet));
   }
 };
 
 /* This creates two sample tweets for the page to start with */
-$(document).ready(function () {
+$(document).ready(function() {
   renderTweets(tweetData);
 });
 
 /* this toggles the new tweet form */
-$(document).ready(function () {
-  $(".nav-bar-btn").on("click", function (event) {
+$(document).ready(function() {
+  $(".nav-bar-btn").on("click", function(event) {
     $("#tweet-form").toggle("show");
     $("#tweet-text").focus();
   });
@@ -109,8 +109,8 @@ $(document).ready(function () {
 
 /* Submit even from the tweet form, checks for empty tweets or long tweets and shows errors.
    If no errors it clears my tweet form and sends the serialized data to the /tweets page */
-$(function () {
-  $("#tweet-form").on("submit", function (event) {
+$(function() {
+  $("#tweet-form").on("submit", function(event) {
     event.preventDefault();
     let tweetLength = $("#tweet-text").val().length;
     let $tweetEmpty = $(`
@@ -143,7 +143,7 @@ $(function () {
       url: "/tweets",
       method: "POST",
       data: $(this).serialize(),
-      success: function (data) {
+      success: function(data) {
         $(".counter").val(140);
         $("#tweet-text").val("");
       },
@@ -152,8 +152,8 @@ $(function () {
 });
 
 /* collects newly added info from the db (freshTweet) and renders it to the tweet container */
-$(document).ready(function () {
-  $("#tweet-form").on("submit", function (event) {
+$(document).ready(function() {
+  $("#tweet-form").on("submit", function(event) {
     event.preventDefault();
     $.ajax({
       url: "/tweets",

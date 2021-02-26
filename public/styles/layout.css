@@ -3,10 +3,13 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -14,19 +17,18 @@ html {
  * Global layout stuff
  */
 
-
 body {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  color:#545149;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #545149;
   background-color: #f4f1ec;
 }
 
 main {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -38,8 +40,9 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- /* removes underline for links */
-a:link, a:visited {
+/* removes underline for links */
+a:link,
+a:visited {
   text-decoration: none;
 }
 
@@ -47,7 +50,7 @@ a:link, a:visited {
 .to-the-top {
   justify-content: center;
   position: fixed;
-  color:black;
+  color: black;
   bottom: 30px;
   right: 30px;
   width: 30px;
@@ -58,61 +61,60 @@ a:link, a:visited {
   background-image: url("../images/arrow.svg");
 }
 
-.to-the-top:hover{
+.to-the-top:hover {
   opacity: 0.7;
 }
 
- /* Makes sure all textareas start transparent and keep their size with text */
+/* Makes sure all textareas start transparent and keep their size with text */
 textarea {
   background: transparent;
-  resize:none;
+  resize: none;
   overflow: auto;
 }
 
 /* class to help reveal and remove the error messages */
-.error-box{
+.error-box {
   visibility: hidden;
   display: flex;
   padding: 5px;
   border: 2px solid rgb(155, 73, 73);
-  color: rgb(155,73,73);
+  color: rgb(155, 73, 73);
 }
 
 /* id to help reveal and remove the error messages */
-#error{
-  visibility:visible;
+#error {
+  visibility: visible;
   padding: 5px;
   border: 2px solid rgb(155, 73, 73);
 }
 
 /* for responsive design at a tablet screen size */
 @media screen and (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
 
-body {
-  flex-direction: row;
-}
+  main {
+    padding-top: 130px;
+    flex-shrink: 1.5;
+    width: 70%;
+  }
 
-main {
-  padding-top: 130px;
-  flex-shrink: 1.5;
-  width: 70%;
-}
+  .nav-bar {
+    font-size: 170%;
+  }
 
-.nav-bar {
-  font-size: 170%;
-}
+  .title {
+    font-size: 120%;
+  }
 
-.title {
-  font-size: 120%;
-}
+  .header {
+    flex-shrink: 2;
+    max-height: fit-content;
+    align-self: flex-start;
+  }
 
-.header {
-  flex-shrink: 2;
-  max-height:fit-content;
-  align-self: flex-start;
-}
-
-.tweet-article {
-  flex-shrink: 5;
-}
+  .tweet-article {
+    flex-shrink: 5;
+  }
 }

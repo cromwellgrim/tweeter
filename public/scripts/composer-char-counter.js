@@ -6,10 +6,10 @@ $(document).ready(function() {
     let numOfChars = $tweetTextArea.val().length;
     let charsLeft = 140 - numOfChars;
     $counter.text(charsLeft);
-    if(charsLeft < 0) {
+    if (charsLeft < 0) {
       $counter.addClass("counter-negative");
     } else {
       $counter.removeClass("counter-negative");
     }
-  })
+  });
 });

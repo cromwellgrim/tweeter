@@ -4,7 +4,7 @@
   padding: 1.5em;
   height: 120px;
   width: 100%;
-  background-color:#4056A1;
+  background-color: #4056a1;
   margin-bottom: 10%;
 }
 
@@ -14,16 +14,16 @@
 }
 
 .title {
-  font-family: 'Bungee Shade', cursive;
+  font-family: "Bungee Shade", cursive;
   color: white;
   font-size: 170%;
-  cursor:default;
+  cursor: default;
 }
 
 .nav-bar-btn {
   display: flex;
-  font-family: 'Bungee', cursive;
-  color:#4056A1;
+  font-family: "Bungee", cursive;
+  color: #4056a1;
   background-color: white;
   border: none;
   border-radius: 1px;

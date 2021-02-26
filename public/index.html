@@ -1,75 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter</title>
+	<head>
+		<!-- Meta Information -->
+		<title>Tweeter</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+		<!-- External CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+			type="text/css"
+		/>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <!-- Font Links -->
-      <!-- Bungee -->
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
-      <!-- Bungee Shade -->
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
-      <!-- Source Sans Pro -->
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+		<!-- App CSS -->
+		<link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+		<link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+		<link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+		<link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+		<link rel="stylesheet" href="/styles/header.css" type="text/css" />
+		<!-- Font Links -->
+		<!-- Bungee -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Bungee Shade -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Source Sans Pro -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- External JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
+		<!-- App JS -->
+		<script type="text/javascript" src="/scripts/client.js"></script>
+		<script
+			type="text/javascript"
+			src="/scripts/composer-char-counter.js"
+		></script>
+	</head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-      <nav class="nav-bar sticky">
-        <span class="title">tweeter</span>
-        <a href="#"><button class="nav-bar-btn">Write a new tweet</button></a>
-      </nav>
+	<body>
+		<!-- Top nav bar (fixed) -->
+		<nav class="nav-bar sticky">
+			<span class="title">tweeter</span>
+			<a href="#"><button class="nav-bar-btn">Write a new tweet</button></a>
+		</nav>
 
-      <!-- header plus logo-->
-      <header class="header">
-        <div class="profile-hex">
-            <img src="/images/profile-hex.png"> 
-        </div>
-        <br>
-        <div class="profile-name">
-            <h1 class="profile-first-name">Dylan</h1>
-            <h2 class="profile-last-name">Rogers</h2>
-        </div>
-      </header>
+		<!-- header plus logo-->
+		<header class="header">
+			<div class="profile-hex">
+				<img src="/images/profile-hex.png" />
+			</div>
+			<br />
+			<div class="profile-name">
+				<h1 class="profile-first-name">Dylan</h1>
+				<h2 class="profile-last-name">Rogers</h2>
+			</div>
+		</header>
 
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="error-box">
-        <!-- error message goes here -->
-      </section>
-      <section class="new-tweet">
-        <form id="tweet-form" class="new-tweet-form" action="/tweets/" method="POST">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="new-tweet-div">
-              <button class="new-tweet-btn" type="submit" >That's it. That's the Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class="tweet-container">
-        <!-- tweets are loaded here -->
-      </section>
-    </main>
-    <a href='#' class='to-the-top'></a>
-  </body>
+		<!-- Page-specific (main) content here -->
+		<main class="container">
+			<section class="error-box">
+				<!-- error message goes here -->
+			</section>
+			<section class="new-tweet">
+				<form
+					id="tweet-form"
+					class="new-tweet-form"
+					action="/tweets/"
+					method="POST"
+				>
+					<textarea
+						name="text"
+						id="tweet-text"
+						placeholder="What are you humming about?"
+					></textarea>
+					<div class="new-tweet-div">
+						<button class="new-tweet-btn" type="submit">
+							That's it. That's the Tweet
+						</button>
+						<output name="counter" class="counter" for="tweet-text">140</output>
+					</div>
+				</form>
+			</section>
+			<section class="tweet-container">
+				<!-- tweets are loaded here -->
+			</section>
+		</main>
+		<a href="#" class="to-the-top"></a>
+	</body>
 </html>
