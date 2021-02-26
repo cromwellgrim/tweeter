@@ -4,10 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// $("#tweet-form").text(textFromUser);
-// I need my security to be achieved!
+ /* security function to prevent hijacking page from tweet form submission */
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
-
+/* stock tweetData for initial tweets to be added to the page */
 const tweetData = [
   {
     "user": {
@@ -32,7 +36,7 @@ const tweetData = [
     "created_at": 1614121386366
   }
 ];
-
+    /*     <p>${tweet["content"]["text"]}</p> */
 // change the created_at element to real time
 
 /* createTweetElement constructs an html article for the tweet based off info delivered from the db */
@@ -46,7 +50,8 @@ const createTweetElement = function(tweet) {
       </div>
       <p class="user-handle">${tweet["user"]["handle"]}</p>
     </header>
-    <p>${tweet["content"]["text"]}</p>
+    <p>${escape(tweet["content"]["text"])}</p>
+
     <hr>
     <footer class="tweet-container-footer">
     <p>${tweet["created_at"]} day ago</p>
@@ -81,7 +86,7 @@ $(document).ready(function() {
 $(function() {
   $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
-    let tweetText = $('#tweet-text').val().length;
+    let tweetLength = $('#tweet-text').val().length;
     let $tweetEmpty = $(`
       <p id="error"> Let us know your thoughts, type in a tweet</p>
     `);
@@ -89,7 +94,7 @@ $(function() {
       <p id="error"> That's too many thoughts, cut your tweet back</p>
     `);
     
-    if (!tweetText) {
+    if (!tweetLength) {
       $('.error-box').show();
       $('.error-box').empty();
       $('.error-box').append($tweetEmpty);
@@ -97,22 +102,25 @@ $(function() {
       return;
     }
 
-    if(tweetText > 140) {
+    if(tweetLength > 140) {
       $('.error-box').show();
       $('.error-box').empty();
       $('.error-box').append($tweetLong);
       return;
     }
 
-    if(140 > tweetText >= 0) {
+    if(140 > tweetLength >= 0) {
       $('.error-box').hide();
-      $('#tweet-text').val('');
     }
 
     $.ajax({
       url: "/tweets",
       method: "POST",
-      data: $(this).serialize()
+      data: $(this).serialize(),
+      success: function(data) {
+        $('.counter').val(140);
+        $('#tweet-text').val('');
+      }
     })
   });
 });
